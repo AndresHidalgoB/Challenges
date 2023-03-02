@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import { App } from "./App";
 import { FirstApp } from "./FirstApp";
 import { GifExpert} from "./GifExpert";
+import {MultipleCustomHook} from './components/MultipleCustomHooks'
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FirstApp value={0} />
-    <GifExpert/>
+    {/* <FirstApp value={0} /> */}
+   {/*  <GifExpert/> */}
+    <MultipleCustomHook/>
+
   </React.StrictMode>
 );
