@@ -8,7 +8,7 @@ export const registerAuth = (email, password) => {
 
         if (response) {
             await updateProfile( auth.currentUser, {
-                displayName: 'Jonathan',
+                displayName: 'Andres',
                 photoURL: ''
             });
 

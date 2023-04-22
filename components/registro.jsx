@@ -11,8 +11,8 @@ export default function Registro() {
     const dispath = useDispatch();
 
     const { email, password, onInputChange, formState } = useForm({
-        email: 'mrgaturus@gmail.com',
-        password: '1324'
+        email: 'andresh@gmail.com',
+        password: '4321'
     });
 
     useEffect(
@@ -39,7 +39,7 @@ export default function Registro() {
                 <input type="email" name="email" onChange={onInputChange} value={email} />
                 <input type="password" name="password" onChange={onInputChange} value={password} />
 
-                <button type="submit">Registro</button>
+                <button type="submit">Registrar</button>
             </form>
         </>
     )

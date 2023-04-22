@@ -18,8 +18,8 @@ export function Upload() {
     return (
         <div>
             <input type="file" onChange={handleChange} name="archivo" />
-            <button onClick={handleUpload}>Upload to Firebase</button>
-            <button onClick={handleRemove}>Remove from Firebase</button>
+            <button onClick={handleUpload}>Subir a Firebase</button>
+            <button onClick={handleRemove}>Eliminar de Firebase</button>
             <p>{percent} "% done</p>
             {
                 files.map((item, key) => {
