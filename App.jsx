@@ -1,27 +1,19 @@
-import "./App.css";
-import React, { useReducer } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AuthContext } from "./AuthContext";
-import { reducer } from "./reducer";
-import Login from "./Login";
-import Home from "./Home";
+import { decrement, increment } from './reducers/slices/counterSlice';
+import { useDispatch } from 'react-redux/es/exports';
+import { useSelector } from 'react-redux/es/exports';
 
-function App() {
-  const [state, dispatch] = useReducer(reducer, {
-    isAuthenticated: false,
-  });
+export const App=()=> {
+    const { counter } = useSelector(state => state.counter);
+    const dispatch = useDispatch();
 
-  return (
-    <AuthContext.Provider value={{ state, dispatch }}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
-    </AuthContext.Provider>
-  );
+    return (
+        <div>
+            <h1>App Counter Redux</h1>
+            <hr />
+            <span>Counter is: { counter }</span>
+            <button onClick={() => dispatch( increment() )}>+1</button>
+            <button onClick={() => dispatch( decrement() )}>-1</button>
+        </div>
+    );
 }
 
-export default App;
