@@ -1,10 +1,5 @@
 import "./App.css";
-import { TodoApp } from "./components/TodoApp";
-
+import {MainApp} from './pages/MainApp'
 export const App = () => {
-  return (
-    <>
-      <TodoApp />
-    </>
-  );
+  return <><MainApp/></>;
 };
