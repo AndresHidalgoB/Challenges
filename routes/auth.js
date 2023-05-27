@@ -8,6 +8,7 @@ const {
 } = require("../Controllers/auth");
 const { check } = require("express-validator");
 const { validarCampos } = require("../middlewares/validar-campos.js");
+const { validarJWT } = require("../middlewares/validar-token");
 
 router.post("/", loginUsuario);
 
@@ -32,6 +33,6 @@ router.post(
   ],
   register
 );
-router.get("/renew", revalidarToken);
+router.get("/renew",revalidarToken);
 
 module.exports = router;
